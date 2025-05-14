@@ -1,1 +1,2 @@
-# nvim
+# Notes
+Package manager: Lazy
