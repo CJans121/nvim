@@ -1,3 +1,4 @@
+-- Provides the gruvbox colorscheme with Neovim native Lua support (customizable contrast, palette, and integrations)
 return {
   "ellisonleao/gruvbox.nvim",
   priority = 1000, -- Load before other plugins (for colorscheme)

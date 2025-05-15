@@ -1,3 +1,4 @@
+-- Provides fuzzy finding, file search, live grep, buffer and help navigation using Telescope (powered by plenary and ripgrep)
 return {
   {
     'nvim-telescope/telescope.nvim',
