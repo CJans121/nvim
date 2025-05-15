@@ -19,3 +19,8 @@ Install all dependencies at once with `xargs -a packages.txt sudo apt install -y
 
 Description of the dependencies
 - `ripgrep` : To use live grep with the telescope plugin
+
+# Notable Keybindings
+<leader> is remapped to <space>
+Ctrl + P = Fuzzy file search
+<leader>fg = Search inside files.
