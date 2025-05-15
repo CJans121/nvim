@@ -13,3 +13,9 @@ To revert this setting, run:
 ```bash
 git config --global --unset url."git@github.com:".insteadOf
 ```
+
+# Dependencies
+Install all dependencies at once with `xargs -a packages.txt sudo apt install -y`
+
+Description of the dependencies
+- `ripgrep` : To use live grep with the telescope plugin
