@@ -2,11 +2,11 @@
 1. Ensure you have the latest neovim from [here](https://github.com/neovim/neovim/blob/master/INSTALL.md).
 2. Clone the repo to `~/.config`.
 ```bash
-cd ~/.config && git clone git@github.com:CJans121/nvim.git
+git clone git@github.com:CJans121/nvim.git ~/.config/nvim 
 ```
 3. Install the plugin dependencies:
 ```bash
-cd nvim && xargs -a packages.txt sudo apt install -y
+xargs -a ~/.config/nvim/requirements.txt sudo apt install -y
 ```
 4. Open neovim.
 ```bash
