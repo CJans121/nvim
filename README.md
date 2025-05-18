@@ -6,7 +6,7 @@ cd ~/.config && git clone git@github.com:CJans121/nvim.git
 ```
 3. Install the plugin dependencies:
 ```bash
-xargs -a packages.txt sudo apt install -y
+cd nvim && xargs -a packages.txt sudo apt install -y
 ```
 4. Open neovim.
 ```bash
