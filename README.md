@@ -14,6 +14,12 @@ nvim
 ```
 That's it. The plugin manager `Lazy` will take care of installing all the plugins.
 
+# Using Patched Fonts
+Some plugins utilize patched fonts (i.e. fonts that have been modified (or "patched") to include additional glyphs and symbols) for enhanced look. We'll install JetBrainsMono Nerd Font below. If you prefer some other Nerd font, check them out [here](https://www.nerdfonts.com/font-downloads) and modify the font name in the following script to install them. 
+```bash
+~/.config/nvim/patched_font_installer.sh
+```
+
 # Plugin Dependencies
 The above instructions already handle the installation of all plugin dependencies. Below is a list of these dependencies along with their descriptions.
 - `ripgrep` : To use live grep with the telescope plugin
