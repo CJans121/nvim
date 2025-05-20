@@ -40,9 +40,11 @@ To revert this setting, run:
 git config --global --unset url."git@github.com:".insteadOf
 ```
 
-
-
 # Notable Keybindings
-<leader> is remapped to <space>
-Ctrl + P = Fuzzy file search
-<leader>fg = Search inside files.
+- `<leader>` is remapped to `<space>`
+- `Ctrl + P` = Fuzzy file search
+- `<leader>fg` = Search inside files.
+- `Ctrl + n` = Open directory navigation pane. Then `S` to open with horizontal split and `s` for vertical.
+
+# Author
+Crasun Jans. Thanks to YT channel typecraft for wonderful tutorials.
