@@ -34,6 +34,11 @@ return {
         vim.keymap.set("n", "<space>f", function()
           vim.lsp.buf.format({ async = true })
         end, opts)
+        -- Diagnostic keymaps (LSP-scoped)
+        vim.keymap.set("n", "<leader>ld", vim.diagnostic.open_float, opts)
+        vim.keymap.set("n", "<leader>lj", vim.diagnostic.goto_next, opts)
+        vim.keymap.set("n", "<leader>lk", vim.diagnostic.goto_prev, opts)
+        vim.keymap.set("n", "<leader>lq", vim.diagnostic.setloclist, opts)
       end,
     })
   end,
