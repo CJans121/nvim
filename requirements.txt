@@ -1,1 +1,3 @@
 ripgrep
+nodejs
+npm

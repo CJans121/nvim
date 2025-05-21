@@ -23,6 +23,9 @@ Some plugins utilize patched fonts (i.e. fonts that have been modified (or "patc
 # Plugin Dependencies
 The above instructions already handle the installation of all plugin dependencies. Below is a list of these dependencies along with their descriptions.
 - `ripgrep` : To use live grep with the telescope plugin
+- `nodejs` : To run Node-based language servers like `pyright` (for Python) and `vim-language-server` (for Vimscript).
+- `npm` : Node.js package manager, used by Mason to install and manage Node-based language servers.
+
   
 # Useful Notes
 
