@@ -6,7 +6,8 @@ git clone git@github.com:CJans121/nvim.git ~/.config/nvim
 ```
 3. Install the plugin dependencies:
 ```bash
-xargs -a ~/.config/nvim/requirements.txt sudo apt install -y
+xargs -a ~/.config/nvim/requirements_apt.txt sudo apt install -y &&
+xargs -a ~/.config/nvim/requirements_npm.txt sudo npm install -g
 ```
 4. Open neovim.
 ```bash
@@ -22,10 +23,19 @@ Some plugins utilize patched fonts (i.e. fonts that have been modified (or "patc
 
 # Plugin Dependencies
 The above instructions already handle the installation of all plugin dependencies. Below is a list of these dependencies along with their descriptions.
+`apt` packages:
 - `ripgrep` : To use live grep with the telescope plugin
 - `nodejs` : To run Node-based language servers like `pyright` (for Python) and `vim-language-server` (for Vimscript).
 - `npm` : Node.js package manager, used by Mason to install and manage Node-based language servers.
+- `clang-format` – Formatter for C and C++ code  
+- `clang` – Linter and compiler for C and C++ code  
+- `libxml2-utils` – Provides xmllint, used for formatting and linting XML  
+- `black` – Code formatter for Python  
+- `flake8` – Linter for Python source code
 
+`npm` packages:
+`prettier` – Formatter for Markdown and various frontend/web file types  
+`markdownlint-cli` – Linter for Markdown files  
   
 # Useful Notes
 

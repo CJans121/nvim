@@ -1,0 +1,8 @@
+ripgrep
+nodejs
+npm
+clang-format
+clang
+libxml2-utils
+black
+flake8

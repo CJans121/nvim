@@ -1,3 +1,0 @@
-ripgrep
-nodejs
-npm
