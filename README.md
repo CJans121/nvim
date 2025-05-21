@@ -6,8 +6,7 @@ git clone git@github.com:CJans121/nvim.git ~/.config/nvim
 ```
 3. Install the plugin dependencies:
 ```bash
-xargs -a ~/.config/nvim/requirements_apt.txt sudo apt install -y &&
-xargs -a ~/.config/nvim/requirements_npm.txt sudo npm install -g
+xargs -a ~/.config/nvim/requirements_apt.txt sudo apt install -y
 ```
 4. Open neovim.
 ```bash
@@ -27,15 +26,17 @@ The above instructions already handle the installation of all plugin dependencie
 - `ripgrep` : To use live grep with the telescope plugin
 - `nodejs` : To run Node-based language servers like `pyright` (for Python) and `vim-language-server` (for Vimscript).
 - `npm` : Node.js package manager, used by Mason to install and manage Node-based language servers.
+
+# Linters and Formatters
+The `none-ls` plugin enables the following linters and formatters as specified in `lua/plugins/none_ls.lua`. Install with Mason by opening nvim and typing `:Mason`. Then, navigate to the corresponding linters and formatters and install by pressing `i`.
+
 - `clang-format` – Formatter for C and C++ code  
 - `clang` – Linter and compiler for C and C++ code  
 - `libxml2-utils` – Provides xmllint, used for formatting and linting XML  
 - `black` – Code formatter for Python  
 - `flake8` – Linter for Python source code
-
-`npm` packages:
-`prettier` – Formatter for Markdown and various frontend/web file types  
-`markdownlint-cli` – Linter for Markdown files  
+- `prettier` – Formatter for Markdown and various frontend/web file types  
+- `markdownlint-cli` – Linter for Markdown files  
   
 # Useful Notes
 
