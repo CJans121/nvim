@@ -1,9 +1,3 @@
--- Redefine tab as two spaces
-vim.cmd("set expandtab")     -- Use spaces instead of tab characters
-vim.cmd("set tabstop=2")     -- Display existing tab characters as 2 spaces wide
-vim.cmd("set softtabstop=2") -- Insert 2 spaces when Tab is pressed in insert mode
-vim.cmd("set shiftwidth=2")  -- Use 2 spaces for each step of auto-indent
-
 -- Enable absolute line numbers by default
 vim.cmd("set number")
 
@@ -19,3 +13,11 @@ vim.o.updatetime = 300
 
 -- Always show sign column to avoid flicker
 vim.opt.signcolumn = "yes"
+
+-- Disable continuation of comment sign to next line in insert mode
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "*",
+  callback = function()
+    vim.opt_local.formatoptions:remove({ "c", "r", "o" })
+  end,
+})
