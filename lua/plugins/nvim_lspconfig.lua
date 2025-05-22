@@ -1,14 +1,28 @@
 -- Enables commonly used language servers using Neovim 0.11+ built-in LSP API and nvim-lspconfig defaults
 return {
   "neovim/nvim-lspconfig",
+  dependencies = {
+    "hrsh7th/cmp-nvim-lsp",
+  }, --- to extend LSP capabilities with completion support for nvim-cmp
   config = function()
-    -- Enable LSPs
-    vim.lsp.enable("pyright")     -- Python
-    vim.lsp.enable("lua_ls")      -- Lua
-    vim.lsp.enable("vimls")       -- Vimscript
-    vim.lsp.enable("clangd")      -- C/C++
-    vim.lsp.enable("lemminx")     -- XML
-    vim.lsp.enable("marksman")    -- Markdown
+    -- Enable enhanced capabilities for nvim-cmp completion
+    local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+    -- List of LSP servers to enable
+    local servers = {
+      "pyright", -- Python
+      "lua_ls", -- Lua
+      "vimls", -- Vimscript
+      "clangd", -- C/C++
+      "lemminx", -- XML
+      "marksman", -- Markdown
+    }
+
+    -- Apply shared capabilities and enable each LSP
+    for _, server in ipairs(servers) do
+      vim.lsp.config(server, { capabilities = capabilities })
+      vim.lsp.enable(server)
+    end
 
     -- Keybindings on LSP attach
     vim.api.nvim_create_autocmd("LspAttach", {
@@ -43,4 +57,3 @@ return {
     })
   end,
 }
-
