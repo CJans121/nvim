@@ -20,6 +20,17 @@ Some plugins utilize patched fonts (i.e. fonts that have been modified (or "patc
 ~/.config/nvim/patched_font_installer.sh
 ```
 
+# ROS2 C++ Notes
+When building your ROS 2 workspace, include the CMake flag `-DCMAKE_EXPORT_COMPILE_COMMANDS=ON` so that a `compile_commands.json` file is generated:
+```bash 
+colcon build --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+```
+Then, create a symbolic link in the workspace root pointing to the generated file:
+```bash
+ln -s ~/<ws_ros2>/build/compile_commands.json ~/<ws_ros2>/compile_commands.json
+```
+This lets your C++ language server (e.g., clangd) locate ROS 2 headers and your package’s headers—enabling go-to-definition, auto-completion, and diagnostics in your editor.
+
 # Plugin Dependencies
 The above instructions already handle the installation of all plugin dependencies. Below is a list of these dependencies along with their descriptions.
 `apt` packages:
