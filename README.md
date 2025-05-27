@@ -69,7 +69,14 @@ git config --global --unset url."git@github.com:".insteadOf
 - `<leader>` is remapped to `<space>`
 - `Ctrl + P` = Fuzzy file search
 - `<leader>fg` = Search inside files.
+- The tmux leader key is remapped from the default `Ctrl-B` to `Ctrl-S`.
 - `Ctrl + n` = Open directory navigation pane. Then `S` to open with horizontal split and `s` for vertical.
+- Pane navigation is remapped using the `vim-tmux-navigator` plugin (which integrates tmux and Neovim navigation) with the following keybindings:
+
+  - `Ctrl-h` — Navigate to the **left** pane  
+  - `Ctrl-j` — Navigate to the **bottom** pane  
+  - `Ctrl-k` — Navigate to the **top** pane  
+  - `Ctrl-l` — Navigate to the **right** pane
 
 # Author
 Crasun Jans. Thanks to YT channel typecraft for wonderful tutorials.
