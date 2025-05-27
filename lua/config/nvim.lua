@@ -21,3 +21,10 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt_local.formatoptions:remove({ "c", "r", "o" })
   end,
 })
+
+-- Navigate between windows using Ctrl-h/j/k/l
+vim.keymap.set('n', '<C-h>', '<Cmd>wincmd h<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-j>', '<Cmd>wincmd j<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-k>', '<Cmd>wincmd k<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-l>', '<Cmd>wincmd l<CR>', { noremap = true, silent = true })
+
