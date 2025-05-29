@@ -64,6 +64,13 @@ To revert this setting, run:
 ```bash
 git config --global --unset url."git@github.com:".insteadOf
 ```
+By default, Lazy clones plugins in parallel for efficiency. However, this may trigger Github throttle limits over some networks. If that is the case, you can limit Lazy to clone 1 (or n# of) plugin(s) at a time by editing replacing the `require("lazy.config")` line in the `init.lua` file with the following:
+```bash
+require("lazy.config").setup({
+}, {
+  concurrency = 1,  -- 👈 limit plugin installs to one at a time to avoid GitHub throttling
+})
+```
 
 # Notable Keybindings
 - `<leader>` is remapped to `<space>`
