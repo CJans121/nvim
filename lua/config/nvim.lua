@@ -28,3 +28,5 @@ vim.keymap.set('n', '<C-j>', '<Cmd>wincmd j<CR>', { noremap = true, silent = tru
 vim.keymap.set('n', '<C-k>', '<Cmd>wincmd k<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-l>', '<Cmd>wincmd l<CR>', { noremap = true, silent = true })
 
+-- Remove autoindent on new line insert
+vim.api.nvim_set_keymap('n', 'o', 'o<esc>D^i', { noremap = true, silent = true })
