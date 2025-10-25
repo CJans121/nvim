@@ -6,3 +6,4 @@ clang
 libxml2-utils
 black
 flake8
+xclip

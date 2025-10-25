@@ -30,3 +30,6 @@ vim.keymap.set('n', '<C-l>', '<Cmd>wincmd l<CR>', { noremap = true, silent = tru
 
 -- Remove autoindent on new line insert
 vim.api.nvim_set_keymap('n', 'o', 'o<esc>D^i', { noremap = true, silent = true })
+
+-- Disable mouse by default
+vim.opt.mouse = nil

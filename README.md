@@ -31,21 +31,26 @@ ln -s ~/<ws_ros2>/build/compile_commands.json ~/<ws_ros2>/compile_commands.json
 ```
 This lets your C++ language server (e.g., clangd) locate ROS 2 headers and your package’s headers—enabling go-to-definition, auto-completion, and diagnostics in your editor.
 
-# Plugin Dependencies
+# Dependencies
+
+## Plugin Dependencies
 The above instructions already handle the installation of all plugin dependencies. Below is a list of these dependencies along with their descriptions.
 `apt` packages:
 - `ripgrep` : To use live grep with the telescope plugin
 - `nodejs` : To run Node-based language servers like `pyright` (for Python) and `vim-language-server` (for Vimscript).
 - `npm` : Node.js package manager, used by Mason to install and manage Node-based language servers.
-
-# Linters and Formatters
-The `none-ls` plugin enables the following linters and formatters as specified in `lua/plugins/none_ls.lua`. Install with Mason by opening nvim and typing `:Mason`. Then, navigate to the corresponding linters and formatters and install by pressing `i`.
-
 - `clang-format` – Formatter for C and C++ code  
 - `clang` – Linter and compiler for C and C++ code  
 - `libxml2-utils` – Provides xmllint, used for formatting and linting XML  
 - `black` – Code formatter for Python  
 - `flake8` – Linter for Python source code
+
+## Other Dependencies
+- `xclip` – Command-line tool to access and manage the system clipboard. Enables copy-paste from nvim to system clipboard with mouse selection.
+
+## Linters and Formatters
+The `none-ls` plugin enables the the above and following linters and formatters as specified in `lua/plugins/none_ls.lua`. The following are not readily installable with `sudo apt`. Thus, **install them with Mason**, the Language Server Protocol manager, by opening nvim and typing `:Mason`. Then, navigate to the corresponding linters and formatters and install by pressing `i`.
+
 - `prettier` – Formatter for Markdown and various frontend/web file types  
 - `markdownlint-cli` – Linter for Markdown files  
   
