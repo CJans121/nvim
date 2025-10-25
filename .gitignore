@@ -1,2 +1,4 @@
 # vim swap files
 **/*.swp
+# Lazy.nvim plugin lock file (auto-generated, don't track)
+lazy-lock.json
