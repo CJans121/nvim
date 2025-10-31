@@ -9,7 +9,12 @@ return {
 				-- Formatters
 				null_ls.builtins.formatting.stylua, -- Lua
 				null_ls.builtins.formatting.black, -- Python
-				null_ls.builtins.formatting.clang_format, -- C/C++
+				null_ls.builtins.formatting.clang_format.with({
+					extra_args = {
+						"--style",
+						"{BasedOnStyle: Microsoft}",
+					},
+				}), -- Cpp with Microsoft-style formatting
 				null_ls.builtins.formatting.prettier, -- Markdown
 				null_ls.builtins.formatting.xmllint, -- XML
 
