@@ -11,8 +11,7 @@ return {
 				null_ls.builtins.formatting.black, -- Python
 				null_ls.builtins.formatting.clang_format.with({
 					extra_args = {
-						"--style",
-						"{BasedOnStyle: Microsoft}",
+						"--style={BasedOnStyle: Microsoft, ColumnLimit: 120}",
 					},
 				}), -- Cpp with Microsoft-style formatting
 				null_ls.builtins.formatting.prettier, -- Markdown
