@@ -38,10 +38,10 @@ return {
 		},
 		opts = {
 			-- See Configuration section for options
-			model = 'claude-sonnet-4.5', -- AI model to use
+			model = 'grok-code-fast-1', -- AI model to use
 			temperature = 0.1, -- Lower = focused, higher = creative
 			window = {
-				layout = 'float',
+				layout = 'horizontal',
 				width = 80, -- Fixed width in columns
 				height = 20, -- Fixed height in rows
 				border = 'rounded', -- 'single', 'double', 'rounded', 'solid'
