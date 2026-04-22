@@ -6,8 +6,7 @@ git clone git@github.com:CJans121/nvim.git ~/.config/nvim
 ```
 3. Install the plugin dependencies:
 ```bash
-curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
-&& xargs -a ~/.config/nvim/requirements_apt.txt sudo apt install -y
+curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash - && xargs -a ~/.config/nvim/requirements_apt.txt sudo apt install -y
 ```
 <small>Note: nodejs >= 22.x is needed for the Github Copilot plugin hence, adding the nodesource repo here</small>
 
